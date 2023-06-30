@@ -1,0 +1,314 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Carrom Board</title>
+        <meta charset="UTF-8">
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <style>
+            .bod{
+    height:410px;
+    width:410px;
+    border:10px solid #0a0000;
+    margin:60px 200px 1px 550px;
+    
+    position: absolute;
+    border-radius:10px;
+    background-color: rgb(146, 184, 23);
+    }
+.inner-body{
+    border:1px solid rgb(9, 12, 26);
+    width:400px;
+    height:400px;
+    position:absolute;
+    background-color:rgb(244, 214, 158);
+    border-radius:20px;
+    margin:5px;
+}
+.left-top-circle{
+    height:25px;
+    width:25px;
+    border:1px solid #d41818;
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:rgb(7, 1, 1);
+    border-radius:50px;
+}
+.right-top-circle{
+    height:25px;
+    width:25px;
+    border:1px solid #e21e1e;
+    position:absolute;
+    right:0;
+    top:0;
+    background-color:black;
+    border-radius:50px;
+}
+.left-bottom-circle{
+    height:25px;
+    width:25px;
+    border:1px solid #ee0404;
+    position:absolute;
+    /* margin:px;  */
+    left:0;
+    bottom:0;
+    background-color:black;
+    border-radius:50px;
+}
+.right-bottom-circle{
+    height:25px;
+    width:25px;
+    border:1px solid #b80e0e;
+    position:absolute;
+    /*margin:10px;*/
+    right:0;
+    bottom:0;
+    background-color:rgb(4, 1, 1);
+    border-radius:50px;
+}
+.position-top{
+    border:1px solid black;
+    border-radius:20px;
+    height:20px;
+    width:275px;
+    margin:50px 5px 5px 63px;
+    top:0;
+    background-color:rgba(166, 222, 44, 0.208);
+    position: absolute;
+}
+.position-bottom{
+    border:1px solid black;
+    border-radius:20px;
+    height:20px;
+    width:275px;
+    margin:5px 5px 50px 63px;
+    bottom:0;
+    background-color:rgba(175, 228, 59, 0.208);
+    position: absolute;
+}
+.position-left{
+    border:1px solid black;
+    border-radius:20px;
+    height:260px;
+    width:20px;
+    margin:70px 5px 48px 50px;
+    left:1;
+    background-color:rgba(175, 228, 59, 0.208);
+    position: absolute;
+}
+.position-right{
+    border:1px solid black;
+    border-radius:20px;
+    height:260px;
+    width:20px;
+    margin:70px 50px 48px 5px;
+    /* top:1; */
+    right:0;
+    background-color:rgba(175, 228, 59, 0.208);
+    position: absolute;
+}
+.box-left-circle{
+    border:1px solid rgb(14, 3, 3);
+    border-radius:50px;
+    height:19px;
+    width:19px;
+    background-color: rgb(229, 10, 10);
+    margin:0px;
+    /* top:0; */
+    left:0;
+    position:absolute;
+}
+.box-right-circle{
+    border:1px solid rgb(14, 3, 3);
+    border-radius:50px;
+    height:19px;
+    width:19px;
+    background-color: rgb(229, 10, 10);
+    margin:0px;
+    right:0;
+    position:absolute;
+}
+.box-top-circle{
+    border:1px solid rgb(14, 3, 3);
+    border-radius:50px;
+    height:19px;
+    width:19px;
+    background-color: rgb(229, 10, 10);
+    margin:0px;
+    top:0;
+    position:absolute;
+}
+.box-bottom-circle{
+    border:1px solid rgb(14, 3, 3);
+    border-radius:50px;
+    height:19px;
+    width:19px;
+    background-color: rgb(229, 10, 10);
+    margin:0px;
+    bottom:0;
+    position:absolute;
+}
+.small-topl-circle{
+    border:1px solid white;
+    border-radius:50px;
+    height: 8px;
+    width:8px;
+    top:0;
+    left:1;
+    position:absolute;
+    margin:66px 5px 5px 58px;
+}
+.small-topr-circle{
+    border:1px solid white;
+    border-radius:50px;
+    height: 8px;
+    width:8px;
+    top:0;
+    right:0;
+    position:absolute;
+    margin:66px 58px 5px 5px;
+}
+.small-bottoml-circle{
+    border:1px solid white;
+    border-radius:50px;
+    height: 8px;
+    width:8px;
+    bottom:0;
+    left:1;
+    position:absolute;
+    margin:5px 5px 66px 58px;
+}
+.small-bottomr-circle{
+    border:1px solid white;
+    border-radius:50px;
+    height: 8px;
+    width:8px;
+    bottom:0;
+    right:0;
+    position:absolute;
+    margin:5px 59px 65px 5px;
+}
+.inner-circle{
+    border:2px solid rgb(241, 6, 6);
+    border-radius:50px;
+    height:100px;
+    width:100px;
+    background-color:rgb(20, 198, 17);
+    margin:150px 0px 0px 150px;
+    position:absolute;
+}
+.inner-circle-inner{
+    border:2px solid rgb(237, 21, 147);
+    border-radius:50px;
+    height:90px;
+    width:90px;
+    background-color: rgb(17, 115, 191);
+    margin:3px 1px 1px 3px;
+    position:absolute;
+}
+.pic{
+   height:80px; 
+   width: 80px;
+   border-radius:50px;
+   border:1px solid black;
+   margin:4px;
+   position:absolute;
+}
+.boxtl{
+    border:1px solid rgb(4, 0, 0);
+    margin:0px;
+    height:px;
+    width:px;
+    top:0;
+    left:0;
+    position:absolute;
+}
+.arrtl{
+    border:1px solid black;
+    height:130px;
+    width:0px;
+    left:0;
+    transform:rotate(135deg);
+    margin:25px 2px 1px 90px;
+    position:absolute;
+}
+.boxtr{
+    border:1px solid rgb(2, 0, 0);
+    margin:0px;
+    height:px;
+    top:0;
+    right:0;
+    width:px;
+    position:absolute;
+}
+.arrtr{
+    border:1px solid black;
+    height:130px;
+    width:0px;
+    right:0;
+    transform:rotate(45deg);
+    margin:30px 81px 1px 1px;
+    position:absolute;
+}
+.boxbl{
+    border:1px solid rgb(214, 172, 66);
+    height:0px;
+    margin:0px 0px 170px 90px;
+    width:0px;
+    bottom:0;
+    left:0;
+    position:absolute;
+}
+.arrbl{
+    border:1px solid black;
+    height:130px;
+    width:0px;
+    transform:rotate(45deg);
+    /* margin:px 0px 0px 0px; */
+}
+.boxbr{
+    border:1px solid rgb(214, 172, 66);
+    height:0px;
+    margin:0px 95px 160px 80px;
+    width:0px;
+    bottom:0;
+    right:0;
+    position:absolute;
+}
+.arrbr{
+    border:1px solid black;
+    height:130px;
+    width:0px;
+    bottom:0;
+    transform:rotate(315deg);
+     margin:0px; 
+}
+        </style>
+    </head>
+    <body bgcolor="orange">
+            
+                <div class="bod">
+                    <div class="inner-body">
+                        <div class="left-top-circle"></div>
+                        <div class="right-top-circle"></div>
+                        <div class="left-bottom-circle"></div>
+                        <div class="right-bottom-circle"></div>
+                        <div class="boxtl"><div class="arrtl"></div></div>
+                        <div class="boxtr"><div class="arrtr"></div></div>
+                        <div class="boxbl"><div class="arrbl"></div></div>
+                        <div class="boxbr"><div class="arrbr"></div></div>
+                        <div class="small-topl-circle"></div>
+                        <div class="small-topr-circle"></div>
+                        <div class="small-bottoml-circle"></div>
+                        <div class="small-bottomr-circle"></div>
+                        <div class="position-right"><div class="box-top-circle"></div><div class="box-bottom-circle"></div></div>
+                        <div class="position-left"><div class="box-top-circle"></div><div class="box-bottom-circle"></div></div>
+                        <div class="position-top"><div class="box-left-circle"></div><div class="box-right-circle"></div></div>
+                        <div class="position-bottom"><div class="box-left-circle"></div><div class="box-right-circle"></div></div>
+                        <div class="inner-circle"><div class="inner-circle-inner">
+                        <img class="pic" src="https://th.bing.com/th/id/R.afa0c801f8ba90420fa4c64764a79445?rik=hMvzx0yi0f%2bjlA&riu=http%3a%2f%2fi.ebayimg.com%2fimages%2fi%2f221346045824-0-1%2fs-l1000.jpg&ehk=EYxLtoyZkD3n3pD1X9PY0jDrw4fg6Ldge7E0FCRtdLI%3d&risl=&pid=ImgRaw&r=0"></div></div>
+                    </div>
+                </div>
+            <h1 align="middle">CARROM BOARD</h1>
+    </body>
+</html>
